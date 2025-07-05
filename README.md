@@ -1,7 +1,10 @@
-# Tauri + SvelteKit
+# eReader + Notes App
+An eReader probably better than the one you use. No hassle, just an eReader with superpowers.
+Feature packed and minimalist at the same time.
 
-This template should help get you started developing with Tauri and SvelteKit in Vite.
-
-## Recommended IDE Setup
-
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
+## Features(TBA)
+- Chill book reading experience
+- Book quotes marked by you turned into cards which can be used in the notes.
+- Books also act as folders for book specific notes.
+- Full fledged notes app
+- And more coming soon.....
