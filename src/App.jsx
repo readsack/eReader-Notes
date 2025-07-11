@@ -1,20 +1,20 @@
-import { useState } from "preact/hooks";
-import preactLogo from "./assets/preact.svg";
+import { createSignal } from "solid-js";
+import logo from "./assets/logo.svg";
 import { invoke } from "@tauri-apps/api/core";
 import "./App.css";
 
 function App() {
-  const [greetMsg, setGreetMsg] = useState("");
-  const [name, setName] = useState("");
+  const [greetMsg, setGreetMsg] = createSignal("");
+  const [name, setName] = createSignal("");
 
   async function greet() {
     // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-    setGreetMsg(await invoke("greet", { name }));
+    setGreetMsg(await invoke("greet", { name: name() }));
   }
 
   return (
     <main class="container">
-      <h1>Welcome to Tauri + Preact</h1>
+      <h1>Welcome to Tauri + Solid</h1>
 
       <div class="row">
         <a href="https://vitejs.dev" target="_blank">
@@ -23,11 +23,11 @@ function App() {
         <a href="https://tauri.app" target="_blank">
           <img src="/tauri.svg" class="logo tauri" alt="Tauri logo" />
         </a>
-        <a href="https://preactjs.com" target="_blank">
-          <img src={preactLogo} class="logo preact" alt="Preact logo" />
+        <a href="https://solidjs.com" target="_blank">
+          <img src={logo} class="logo solid" alt="Solid logo" />
         </a>
       </div>
-      <p>Click on the Tauri, Vite, and Preact logos to learn more.</p>
+      <p>Click on the Tauri, Vite, and Solid logos to learn more.</p>
 
       <form
         class="row"
@@ -38,12 +38,12 @@ function App() {
       >
         <input
           id="greet-input"
-          onInput={(e) => setName(e.currentTarget.value)}
+          onChange={(e) => setName(e.currentTarget.value)}
           placeholder="Enter a name..."
         />
         <button type="submit">Greet</button>
       </form>
-      <p>{greetMsg}</p>
+      <p>{greetMsg()}</p>
     </main>
   );
 }

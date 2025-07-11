@@ -1,6 +1,6 @@
-# Tauri + Preact
+# Tauri + Solid
 
-This template should help get you started developing with Tauri and Preact in Vite.
+This template should help get you started developing with Tauri and Solid in Vite.
 
 ## Recommended IDE Setup
 
