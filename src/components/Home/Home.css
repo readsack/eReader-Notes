@@ -1,0 +1,15 @@
+.createBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(40, 40, 40);
+    border-radius: 10px;
+    transition: all 200ms ease;
+    margin: 10px;
+}
+
+.createBtn:hover {
+    transform: scale(1.05);
+}
